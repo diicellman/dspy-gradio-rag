@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "dspy-gradio-rag"
+version = "0.1.0"
+description = "RAG example using DSPy, Gradio"
+authors = ["diicell"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.11"
+fastapi = "^0.110.0"
+dspy-ai = "^2.4.0"
+chromadb = "^0.4.24"
+uvicorn = {extras = ["standard"], version = "^0.28.0"}
+ollama = "^0.1.7"
+gradio = "^4.21.0"
+arize-phoenix = "^3.12.0"
+openinference-instrumentation-dspy = "^0.1.5"
+opentelemetry-exporter-otlp = "^1.23.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
