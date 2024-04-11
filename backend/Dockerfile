@@ -16,6 +16,11 @@ RUN pip install poetry
 # Copy the pyproject.toml (and possibly poetry.lock) file to the container
 COPY pyproject.toml /rag/
 
+ARG ENVIRONMENT
+ARG INSTRUMENT_DSPY
+ARG COLLECTOR_ENDPOINT
+ARG OLLAMA_BASE_URL
+
 # Install dependencies via poetry
 RUN poetry config virtualenvs.create false \
 && poetry install
