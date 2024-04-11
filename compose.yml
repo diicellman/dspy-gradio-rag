@@ -10,6 +10,7 @@ services:
     ports:
       - "8000:8000"
     environment:
+      - ENVIRONMENT=dev
       - COLLECTOR_ENDPOINT=http://phoenix:6006/v1/traces
       # Set INSTRUMENT_DSPY=false to disable instrumentation
       - INSTRUMENT_DSPY=true
